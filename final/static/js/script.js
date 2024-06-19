@@ -133,8 +133,8 @@ class App {
 
 
     var circle = L.circle([11.10827316868071, 106.6142366115691], {
-      color: 'green',
-      fillColor: 'green',
+      color: 'yellowgreen',
+      fillColor: 'yellowgreen',
       fillOpacity: 0.5,
       radius: 5000,
     }).addTo(this.#map);
