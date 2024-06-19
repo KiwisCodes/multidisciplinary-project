@@ -125,14 +125,14 @@ class App {
     ];
 
 // Create a large rectangle that covers the entire map view and beyond
-    const largeRectangle = L.rectangle(largeBounds, {
-      color: 'red',
-      fillColor: 'red',
-      fillOpacity: 0.5
-    }).addTo(this.#map);
+//     const largeRectangle = L.rectangle(largeBounds, {
+//       // color: 'red',
+//       // fillColor: 'red',
+//       fillOpacity: 0.5
+//     }).addTo(this.#map);
 
 
-    var circle = L.circle(coords, {
+    var circle = L.circle([11.10827316868071, 106.6142366115691], {
       color: 'green',
       fillColor: 'green',
       fillOpacity: 0.5,
@@ -395,11 +395,11 @@ function fetchData() {
                 coord1 = coords;
                 duration = duration1 + 1;
                 duration1 += 1;
-                speed1 = (speed1 + dist)/2;
+                speed1 = dist1/duration1;
                 dist1 += dist;
                 dist = dist1;
               }
-
+``
               if (id === "4f8e86a9-16a5-409e-a599-ba781723cca4") {
                 if (coord2.length > 0) {
                   dist = calculateDistance(coord2[0], coord2[1], coords[0], coords[1]);
@@ -407,7 +407,7 @@ function fetchData() {
                 coord2 = coords;
                 duration = duration2 + 1;
                 duration2 += 1;
-                speed2 = (speed2 + dist)/2;
+                speed2 = dist2/duration2;
                 dist2 += dist;
                 dist = dist2;
               }
@@ -419,7 +419,7 @@ function fetchData() {
                 coord3 = coords;
                 duration = duration3 + 1;
                 duration3 += 1;
-                speed3 = (speed3 + dist)/2;
+                speed3 = dist3/duration3;
                 dist3 += dist;
                 dist = dist3;
               }
